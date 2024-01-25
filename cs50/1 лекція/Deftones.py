@@ -1,14 +1,15 @@
 def text_to_binary(text):
-    binary_result = ""
+    binary_result = ""# add emptyline after
     for char in text:
-        binary_result += format(ord(char), '08b') + " "
-    return binary_result.strip()
+        binary_result += format(ord(char), '08b') + " " #todo let move '08b' to params
+    return binary_result.strip() #todo add emptyline before
 
 def binary_to_ascii(binary_code):
-    ascii_art = ""
-    for binary_char in binary_code.split():
+    #todo do we ca use map and lambda for optimizate code
+    ascii_art = "" #todo add emty line
+    for binary_char in binary_code.split(): #todo do not use split method in loop
         ascii_art += chr(int(binary_char, 2))
-    return ascii_art
+    return ascii_art #todo add empty line befor return
 
 def main():
     sentence = input("Введіть ваше речення: ")
@@ -19,7 +20,9 @@ def main():
     print("ASCII-арт:")
     print(ascii_art)
 
+    #todo make saperate method for output, here we should init data
     # Вставити ASCII-арт тут
+    #todo WTF, why do we need it here remove
     custom_art = """
                                       ^7?^                                                    
                                          .?B@5P@!                                                   
@@ -52,3 +55,8 @@ if __name__ == "__main__":
     main()
 
 
+#todo add function for convert from binary code to text
+
+#todo add function for generate console art
+# [[0,0,0,1,1][0,0,1,1,0],[0,1,1,0,0]] there is initial param
+# use only eng
